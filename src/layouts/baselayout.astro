@@ -17,10 +17,14 @@ import Head from "../components/head.astro";
 import Header from "../components/header.astro"
 import Footer from "src/components/footer.astro";
 
----
-<html lang="en">
 
-<Head />
+import { CONFIG } from "../js/load-config";
+const { title, description } = Astro.props;
+---
+
+<html lang={CONFIG.LANG}>
+
+<Head title={title} description={description} />
 <body class="sans">
     <Header />
     <main class="container-lg centered pw-base">

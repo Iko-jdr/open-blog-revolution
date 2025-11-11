@@ -1,0 +1,9 @@
+CONFIG: 
+    - TITLE: My super blog
+    - URL: www.url.com
+    - DESCRIPTION: This is a blog about so many things
+    - LANG: EN
+    - AUTHOR: John Doe
+    - CONTACT: true
+    - EMAIL: contact@contact.com
+    - THUMBS: false
