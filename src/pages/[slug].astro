@@ -12,8 +12,6 @@ import { sanitizeString } from "public/js/util/util";
 export async function getStaticPaths() {
   const posts = await getCollection("posts");
   return posts.map((post) => {
-    // const slug = post.data.postSlug; // all posts must have a slug or fail
-    // deprecated, now slug is autimaticlly assigned
     const slug = post.data.postSlug || sanitizeString(post.data.title);
 
     return {
@@ -24,10 +22,16 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
+const { slug } = Astro.params;
 const { title, tags, pubDate, description } = post.data;
 const { Content } = await post.render();
 
 import { CONFIG } from "../js/load-config";
+
+const queryFilters = {
+    tags: tags,
+    posts: slug
+}
 
 ---
 
@@ -57,7 +61,7 @@ import { CONFIG } from "../js/load-config";
     </article-head>
 
     <Content />
-    <PostFooter allPostTags = {tags}/>
+    <PostFooter queryFilters={queryFilters} />
   </article>
   <PrintFooter />
 

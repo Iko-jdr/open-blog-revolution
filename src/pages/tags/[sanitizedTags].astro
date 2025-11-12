@@ -23,8 +23,16 @@ return allTagPages;
 }
 
 const { originalTags } = Astro.props;
+const { sanitizedTags } = Astro.params;
+
+
+const queryFilters = {
+  tags: originalTags,
+  posts: ''
+
+}
 ---
 <BaseLayout title=`Posts tagged with: ${originalTags}` description=`Posts tagged with: ${originalTags}`>
   <h1>Posts tagged with: {originalTags}</h1>
-  <AllPosts postFilter = {originalTags} />
+  <AllPosts queryFilters = {queryFilters} />
 </BaseLayout>
