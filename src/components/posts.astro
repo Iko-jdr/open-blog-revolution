@@ -5,7 +5,7 @@ import { sanitizeString } from "public/js/util/util";
 const allPosts = await getCollection("posts");
 
 // const { postFilter = "all" } = Astro.props; 
-const { queryFilters } = Astro.props;
+const { queryFilters, heading } = Astro.props;
 
 const tagFilters = [].concat( queryFilters?.tags || ["all"]);
 
@@ -13,21 +13,31 @@ const postFilters = [].concat( queryFilters?.posts || [""] );
 
 //const postsFilteredByTags = tagFilters.includes("all") ? allPosts : allPosts.filter( post => post.data.tags.some( el =>  tagFilters.includes(el)));
 
-const posts = allPosts.filter( post =>
+const filteredByTag = allPosts.filter( post =>
   tagFilters.includes("all") || post.data.tags.some( tag => tagFilters.includes(tag))
-  )
-  .filter( post => { 
+);
+
+const filteredBySlug = filteredByTag.filter( post => { 
   const slug = post.data.postSlug || sanitizeString(post.data.title);
   return !postFilters.includes(slug);
-  })
+})
+
+const posts = filteredBySlug;
 
 posts.sort((a, b) => b.data.pubDate - a.data.pubDate);
 
+// Need to add slice
+
+const a = "a";;
 ---
-<elt-all-posts>
-    {
+{posts.length > 0 && (
+  <elt-all-posts>
+    {heading && (
+      <hr>
+      <elt-post-head set:html={heading}></elt-post-head>
       
-      posts.map(async (post) => {
+    )}
+    {posts.map(async (post) => {
         // Mark the map callback as async
         return (
           <elt-post>
@@ -57,3 +67,5 @@ posts.sort((a, b) => b.data.pubDate - a.data.pubDate);
       })
     }
   </elt-all-posts>
+)
+}

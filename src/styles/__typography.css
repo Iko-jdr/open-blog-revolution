@@ -102,6 +102,10 @@ figure img {
     margin: 0;
 }
 
+strong, .strong {
+    font-weight: bold;
+}
+
 a, a em, a strong {
     color: var(--color-secondary);
     font-size: var(--size-0);

@@ -1,11 +1,8 @@
 ---
-const { queryFilters } = Astro.props;
+const { queryFilters, heading } = Astro.props;
 import AllPosts from 'src/components/posts.astro';
 
 ---
 <post-footer class="block mt-lg">
-    <hr>
-    <p>You might also be interested in the following posts</p>
-    <p><strong>TODO: Smaller fonts?headings, remove current post, fallback if nothing relevant to show</strong></p>
-    <AllPosts queryFilters={queryFilters} />
+    <AllPosts queryFilters={queryFilters} heading={heading} />
 </post-footer>
