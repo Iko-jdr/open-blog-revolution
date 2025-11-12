@@ -4,14 +4,11 @@ import { getCollection } from "astro:content";
 import { sanitizeString } from "public/js/util/util";
 const allPosts = await getCollection("posts");
 
-// const { postFilter = "all" } = Astro.props; 
 const { queryFilters, heading } = Astro.props;
 
-const tagFilters = [].concat( queryFilters?.tags || ["all"]);
+const tagFilters: string[] = [].concat( queryFilters?.tags || ["all"]);
 
-const postFilters = [].concat( queryFilters?.posts || [""] );
-
-//const postsFilteredByTags = tagFilters.includes("all") ? allPosts : allPosts.filter( post => post.data.tags.some( el =>  tagFilters.includes(el)));
+const postFilters: string[] = [].concat( queryFilters?.posts || [""] );
 
 const filteredByTag = allPosts.filter( post =>
   tagFilters.includes("all") || post.data.tags.some( tag => tagFilters.includes(tag))
@@ -24,7 +21,7 @@ const filteredBySlug = filteredByTag.filter( post => {
 
 const posts = filteredBySlug;
 
-posts.sort((a, b) => b.data.pubDate - a.data.pubDate);
+posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 // Need to add slice
 
