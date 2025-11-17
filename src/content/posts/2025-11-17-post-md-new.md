@@ -6,6 +6,10 @@ status: published
 author: Iko
 tags:
   - cooking
+cover:
+  src: src/content/media/cloud.png
+  title: Clouds
+  alt: Clouds
 ---
 Post md new body
 
