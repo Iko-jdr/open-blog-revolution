@@ -17,6 +17,5 @@ content:
         type: string
       - name: LANG
         label: "Blog language"
-        type: select
-        options:
-          values: [ EN, FR, IT ]
+        type: string
+        default: EN
