@@ -5,6 +5,8 @@ title: Test New Post
 description: Post description
 tags:
   - tag: holidays
+  - tag: cooking
+  - tag: soccer
 ---
 # Heading #
 
