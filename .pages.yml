@@ -32,7 +32,7 @@ content:
         type: string
         list: true
       - name: body
-        label: body
+        label: Body
         type: rich-text
         required: true
         
