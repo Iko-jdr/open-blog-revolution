@@ -20,7 +20,9 @@ content:
         required: true
       - name: status
         label: Status
-        type: string
+        type: select
+        options:
+            values: [ draft, published ]
         required: true
       - name: author
         label: Author
