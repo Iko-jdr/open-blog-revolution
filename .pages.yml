@@ -52,7 +52,7 @@ content:
             type: string
 
   - name: home
-    label: "Home intro text"
+    label: "Home intro text .mdx text"
     type: file
     path: src/data/home.mdx
     fields: 
@@ -61,7 +61,7 @@ content:
         type: text
         
   - name: postFooter
-    label: "Poost Footer text"
+    label: "Poost Footer text .mdx text"
     type: file
     path: src/data/post-footer.mdx
     fields:
@@ -70,7 +70,7 @@ content:
         type: text
 
   - name: postSuggestionHeading
-    label: "Post Suggestion Heading"
+    label: "Post Suggestion Heading HTML text"
     type: file
     path: src/data/post-suggestion-heading.mdx
     fields:
@@ -79,7 +79,7 @@ content:
         type: string
 
   - name: footer
-    label: "Footer text"
+    label: "Footer text .mdx text"
     type: file
     path: src/data/footer.mdx
     fields:
