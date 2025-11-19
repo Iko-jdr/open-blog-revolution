@@ -57,7 +57,7 @@ content:
     path: src/data/home.mdx
     fields: 
       - name: body
-        label: home
+        label: "Home intro text"
         type: text
         
   - name: post-footer
@@ -66,16 +66,16 @@ content:
     path: src/data/post-footer.mdx
     fields:
       - name: body
-      - label: home
+      - label: "Post Footer"
       - type: text
 
   - name: post-suggestion-heading
     label: "Post Suggestion Heading"
     type: file
     path: src/data/post-suggestion-heading.mdx
-    fields:
-      - name: post-suggestion-heading
-      - label: home
+    fields: 
+      - name: body
+      - label: "Post Suggestion Heading"
       - type: text
 
   - name: footer
