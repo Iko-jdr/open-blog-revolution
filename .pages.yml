@@ -93,10 +93,6 @@ content:
     label: "User Styles"
     type: file
     path: src/styles/user-styles.css
-    fields:
-      - name: body
-        label: Styles
-        type: text
       
   - name: CONFIG
     label: "Blog Config"
@@ -116,6 +112,12 @@ content:
         label: Blog language
         type: string
         default: EN
+      - name: STYLE
+        label: Fonst style
+        type: select
+        defaul: sans
+        options:
+            values: [ sans, serif, sans-and-serif, serif-and-sans ]
       - name: AUTHOR
         label: Author name
         type: string
