@@ -1,15 +1,47 @@
 :root {
-    /* Base definiition */
-    --color-highlight-chroma: 0.1922;
-    --color-highlight-hue: 106.77;
+  /* Pimary Definition */
+  --color-primary-chroma: 0.0345;
+  --color-primary-hue: 260;
 
-    --color-highlight: oklch(55% var(--color-highlight-chroma) var(--color-highlight-hue));
+  --color-primary: oklch(55% var(--color-primary-chroma) var(--color-primary-hue));
 
-    --color-highlight-lighter: oklch(97% calc(1 * var(--color-highlight-chroma)) var(--color-highlight-hue));
-    --color-highlight-light: oklch(70% calc(1 * var(--color-highlight-chroma)) var(--color-highlight-hue));
-    --color-highlight-dark: oklch(40% calc(1 * var(--color-highlight-chroma)) var(--color-highlight-hue));
-    --color-highlight-darker: oklch(25% calc(1 * var(--color-highlight-chroma)) var(--color-highlight-hue));
-}
+  --color-primary-lighter: oklch(90% calc(1 * var(--color-primary-chroma)) var(--color-primary-hue));
+  --color-primary-light: oklch(70% calc(1 * var(--color-primary-chroma)) var(--color-primary-hue));
+  --color-primary-dark: oklch(40% calc(1 * var(--color-primary-chroma)) var(--color-primary-hue));
+  --color-primary-darker: oklch(25% calc(1 * var(--color-primary-chroma)) var(--color-primary-hue));
+
+  /* Secondary Definition */
+  --color-secondary-chroma: 0.1249;
+  --color-secondary-hue: 227.69;
+
+  --color-secondary: oklch(55% var(--color-secondary-chroma) var(--color-secondary-hue));
+
+  --color-secondary-lighter: oklch(90% calc(1 * var(--color-secondary-chroma)) var(--color-secondary-hue));
+  --color-secondary-light: oklch(70% calc(1 * var(--color-secondary-chroma)) var(--color-secondary-hue));
+  --color-secondary-dark: oklch(40% calc(1 * var(--color-secondary-chroma)) var(--color-secondary-hue));
+  --color-secondary-darker: oklch(25% calc(1 * var(--color-secondary-chroma)) var(--color-secondary-hue));
+
+  /* Alert Definition */
+  --color-alert-chroma: 0.0949;
+  --color-alert-hue: 11.37;
+
+  --color-alert: oklch(55% var(--color-alert-chroma) var(--color-alert-hue));
+
+  --color-alert-lighter: oklch(90% calc(1 * var(--color-alert-chroma)) var(--color-alert-hue));
+  --color-alert-light: oklch(70% calc(1 * var(--color-alert-chroma)) var(--color-alert-hue));
+  --color-alert-dark: oklch(40% calc(1 * var(--color-alert-chroma)) var(--color-alert-hue));
+  --color-alert-darker: oklch(25% calc(1 * var(--color-alert-chroma)) var(--color-alert-hue));
+
+  /* Highlight Definition */
+  --color-highlight-chroma: 0.1922;
+  --color-highlight-hue: 106.77;
+
+  --color-highlight: oklch(55% var(--color-highlight-chroma) var(--color-highlight-hue));
+
+  --color-highlight-lighter: oklch(97% calc(1 * var(--color-highlight-chroma)) var(--color-highlight-hue));
+  --color-highlight-light: oklch(70% calc(1 * var(--color-highlight-chroma)) var(--color-highlight-hue));
+  --color-highlight-dark: oklch(40% calc(1 * var(--color-highlight-chroma)) var(--color-highlight-hue));
+  --color-highlight-darker: oklch(25% calc(1 * var(--color-highlight-chroma)) var(--color-highlight-hue));}
 
 .primary {
     color: var(--color-primary);
