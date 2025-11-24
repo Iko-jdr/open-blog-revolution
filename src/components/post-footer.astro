@@ -1,6 +1,7 @@
 ---
-const { queryFilters, heading, nbPosts } = Astro.props;
-import AllPosts from 'src/components/query-posts.astro';
+const { queryFilters, heading, nbPosts, articleHeaderContentClass } = Astro.props;
+
+import QueryPosts from 'src/components/query-posts.astro';
 
 import { CONFIG } from "@config";
 
@@ -11,6 +12,6 @@ import PostFooterText from "../data/post-footer.mdx"
 <footer class="article-footer mt-lg">
     <PostFooterText />
     {CONFIG.POST_THUMBNAILS &&
-        <AllPosts queryFilters={queryFilters} heading={heading} nbPosts={nbPosts} />
+        <QueryPosts queryFilters={queryFilters} heading={heading} nbPosts={nbPosts} articleHeaderContentClass={articleHeaderContentClass}  />
     }
 </footer>

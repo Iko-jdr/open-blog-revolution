@@ -2,9 +2,7 @@
 import Tags from "src/components/tags.astro";
 import Cover from "./cover.astro";
 
-const { hasCover=false, url, title='', titleTag = 'h1', description='', descriptionTag = 'h2', pubDate, tags=[], coverSrc='', coverAlt='' } = Astro.props;
-
-console.log(hasCover, url, title, 'coverSrc:', coverSrc, 'coverAlt:', coverAlt)
+const { hasCover=false, url, title='', titleTag = 'h1', description='', descriptionTag = 'h2', pubDate, tags=[], coverSrc='', coverAlt='', articleHeaderContentClass='' } = Astro.props;
 
 const Heading = titleTag;
 const Description = descriptionTag;
@@ -25,6 +23,8 @@ const readableDate = pubDate && pubDate.toLocaleDateString("en-GB", {
       </article-date>
       <Tags allPostTags={tags} />
     </article-meta>
-    {hasCover && <Cover src={coverSrc} alt={coverAlt} />}
-    <Description class="text-none">{description}</Description>
+    <article-header-content class={articleHeaderContentClass}>
+      {hasCover && <Cover src={coverSrc} alt={coverAlt} />}
+      <Description class="text-none">{description}</Description>
+    </article-header-content>
 </header>

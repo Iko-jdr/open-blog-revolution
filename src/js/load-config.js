@@ -31,7 +31,6 @@ let getUseConfigFromFile = (configFileName) => {
         return {configError: `YAML is invalid`};
     }
     
-    console.log("yamlObject", yamlObject)
     let userConfigFromFile = yamlObject;
     /*
     yamlObject.CONFIG.forEach(el => {
