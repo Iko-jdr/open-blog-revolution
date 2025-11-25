@@ -19,4 +19,11 @@ export default defineConfig({
       remarkPlugins: [remarkExtendImage, remarkExtendBlockquote]
     }
   )],
+  vite: {
+    resolve: {
+      alias: {
+        "@config": ["src/js/load-config.js"]
+      }
+    }
+  }
 });

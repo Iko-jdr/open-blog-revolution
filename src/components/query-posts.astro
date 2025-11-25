@@ -1,12 +1,11 @@
 ---
-import PostHeader from "./post-header.astro";
+import PostList from "./post-list.astro";
 
 import { getCollection } from "astro:content";
 
 const allPosts = await getCollection("posts");
 
-const { queryFilters, heading, nbPosts, hasCover = false, articleHeaderContentClass } = Astro.props;
-
+const { queryFilters, heading, nbPosts, hasCover = false, sectionHeaderContentClass } = Astro.props;
 
 const tagFilters: string[] = [].concat( queryFilters?.tags || ["all"]);
 
@@ -28,25 +27,5 @@ const posts = nbPosts ? filteredBySlug.slice(0, nbPosts) : filteredBySlug;
 posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 ---
-{posts.length > 0 && (
-  <>
-  {heading && (
-      <hr>
-      <span set:html={heading}></span>
-    )}
-  </>
-  <ul id="all-posts">
-    {posts.map(async (post) => {
-        return (
-          <li>
-            <article class="post-preview">
-              <PostHeader hasCover={hasCover} coverSrc={post.data.cover?.src} coverAlt={post.data.cover?.src} url={`${import.meta.env.BASE_URL}${post.slug}`} title={post.data.title} titleTag='h2' description={post.data.description} descriptionTag = 'p' pubDate={post.data.pubDate} tags={post.data.tags} articleHeaderContentClass={articleHeaderContentClass}/>
-            </article>
-          </li>
+<PostList posts={posts} heading={heading} hasCover={hasCover} titleTag='h2' descriptionTag='p' sectionHeaderContentClass={sectionHeaderContentClass}/>
 
-        );
-      })
-    }
-  </ul>
-)
-}
