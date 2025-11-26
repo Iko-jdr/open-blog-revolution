@@ -2,7 +2,7 @@
 
 HTML first blog template for writers and devs.
 
-![OBR Banner](./pubblic/obr_large.png)
+![OBR Banner](./public/obr_large.png)
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/the-coded-type/open-blog-revolution)
 
@@ -46,6 +46,8 @@ Any OBR blog can be hosted anywhere. This document provides instructions to inst
 Released under the [MIT License](./LICENSE)
 
 ## Installation on Netlify
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/the-coded-type/open-blog-revolution)
 
 * Fork this repository (fork button on the top right corner). GitHub will create a copy of that entire project under your username. You might need to create a GitHub account.
 
@@ -108,6 +110,8 @@ Posts must have at least one tag.
 `.mdx` is similar to Markdown but allows you to use HTML tags.
 
 ## Contributing Policy
+**Feature requests**
+Submit and upvote feature requests https://github.com/the-coded-type/open-blog-revolution/discussions/2
 
 **If you found a bug:**
 Please open an issue to report it.
