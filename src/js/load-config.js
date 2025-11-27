@@ -44,7 +44,7 @@ let getUseConfigFromFile = (configFileName) => {
 const DEFAULT_CONFIG = {
     TITLE: 'Open Blog Revolution',
     URL: '',
-    BASE: '',
+    BASE: '/',
     DESCRIPTION: 'Free blog template for writers',
     LANG: 'EN',
     STYLE: 'sans',
