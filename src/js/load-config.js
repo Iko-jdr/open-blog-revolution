@@ -43,7 +43,8 @@ let getUseConfigFromFile = (configFileName) => {
  
 const DEFAULT_CONFIG = {
     TITLE: 'Open Blog Revolution',
-    URL: 'http://www.thecodedtype.com',
+    URL: '',
+    BASE: '',
     DESCRIPTION: 'Free blog template for writers',
     LANG: 'EN',
     STYLE: 'sans',
