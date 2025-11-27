@@ -1,9 +1,9 @@
-TITLE: Open Blog Revolution
-URL: 'https://open-blog-revolution.netlify.app/'
-BASE: ''
-DESCRIPTION: Free blog template
+TITLE: Open Blog Revolution Demo Test
+URL: https://admirable-monstera-29a236.netlify.app/
+BASE: /
+DESCRIPTION: Free blog template for nerds!!!!
 LANG: EN
-STYLE: sans
+STYLE: serif-and-sans
 AUTHOR: Iko
 CONTACT: true
 EMAIL: youremail@email.com
