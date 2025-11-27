@@ -14,7 +14,7 @@ const createSanitizer = (base) => (url) => {
     
     const combined = `${cleanBase}/${url}`;
 
-    console.log("*** createSanitizer combined", base)
+    console.log("*** createSanitizer combined", combined)
 
     
     // Regex fies double // without affecting protocol
