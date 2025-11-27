@@ -128,7 +128,7 @@ content:
         label: Blog url
         type: string
       - name: BASE
-        label: Blog base folder (leave empty if none)
+        label: Blog leave default / if NA
         type: string
         default: '/'
       - name: DESCRIPTION
